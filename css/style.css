@@ -1,198 +1,121 @@
-/* GENEL AYARLAR */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
-
 body {
-    background-color: #f9fbfd;
-    color: #333;
-    line-height: 1.6;
+    color: darkslategrey;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
-
-/* HEADER */
-header {
-    background: linear-gradient(135deg, #007BFF, #00A8FF);
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
+ul {
+    list-style-type: none;
 }
-
-header h1 span {
-    color: #fff;
-    font-weight: 700;
+a {
+    text-decoration: none;
+    color: inherit;
 }
-
-header h3 {
-    margin-top: 10px;
-    font-weight: 400;
+img {
+    width: 100%;
+    border-radius: 5px;
 }
-
-header p {
-    margin: 10px 0 20px 0;
-}
-
-header button {
-    background-color: white;
-    color: #007BFF;
+button {
+    padding: 12px 18px;
     border: none;
-    padding: 10px 20px;
-    font-weight: 600;
-    border-radius: 25px;
+    border-radius: 5px;
+    background-color: rgb(7, 51, 162);
+    color: rgb(244, 244, 244);
+    font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
 }
-
-header button:hover {
-    background-color: #e6f0ff;
+button:hover {
+    background-color: rgb(116, 165, 244);
 }
-
-/* NAV */
-nav {
-    background-color: #ffffff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+p {
+    line-height: 1.5;
+    text-align: justify;
 }
-
-nav ul {
+header {
+    background-color: rgb(1, 90, 255);
+    text-align: center;
+    height: 280px;
     display: flex;
     justify-content: center;
-    list-style: none;
+    align-items: center;
+    flex-direction: column;
 }
-
-nav ul li {
-    margin: 10px 20px;
+header h1 {
+    color: #f4f4f4;
+    font-family: serif  ;
+    margin-bottom: 10px;
 }
-
+header p {
+    color: #f4f4f4;
+    margin-bottom: 20px;
+}
+nav ul {
+    background-color: rgb(116, 165, 244);
+    display: flex;
+    justify-content: center;
+}
 nav ul li a {
-    text-decoration: none;
-    color: #007BFF;
-    font-weight: 500;
-    transition: color 0.3s;
+    display: block;
+    padding: 18px 25px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
 }
-
 nav ul li a:hover {
-    color: #0056b3;
+    background-color: rgb(44, 110, 253);
 }
-
-/* MAIN YAPI */
 main {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 40px 8%;
-    gap: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 20px;
+    padding: 0 15px;
 }
-
-/* SOL TARAF (İÇERİK) */
-.main-left {
+main section {
     flex: 2;
 }
 
+main div {
+    flex: 1;
+}
 .card {
     background-color: white;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
-    margin: 15px 0;
-}
-
-.card button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.card button:hover {
-    background-color: #0056b3;
-}
-
-/* SAĞ TARAF (YAN PANEL) */
-.sidebar {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.sidebar-box {
-    background-color: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-.sidebar-box h3 {
-    color: #007BFF;
+.card h2 {
     margin-bottom: 10px;
-    border-bottom: 2px solid #e6f0ff;
-    padding-bottom: 5px;
+    color: darkslategray;
 }
-
-.sidebar-box ul {
-    list-style: none;
-    padding-left: 0;
+.card-date {
+    font-size: 14px;
+    color: #808080;
+    margin: 10px 0;
 }
-
-.sidebar-box ul li {
-    margin: 8px 0;
-}
-
-.sidebar-box ul li a {
-    text-decoration: none;
-    color: #333;
-    transition: 0.3s;
-}
-
-.sidebar-box ul li a:hover {
-    color: #007BFF;
-}
-
-/* FOOTER */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #f0f4f8;
-    color: #555;
-    margin-top: 40px;
-    font-size: 14px;
+    background-color: rgb(1, 90, 255);
+    color: darkslategray;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-weight: bold;
 }
-
-/* RESPONSIVE TASARIM */
-@media (max-width: 900px) {
-    main {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-    }
-
-    .main-left {
-        width: 100%;
-    }
+footer p{
+    color: #f4f4f4;
 }
-
-/* HOVER EFEKTLERİ */
-.card:hover,
-.sidebar-box:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+.alt{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+   padding-top: 10px;
+    margin-bottom: 177px;
 }
-
-/* Hover sırasında görsel de hafif parlaklaşsın */
-.card img:hover {
-    filter: brightness(1.05);
-    transition: 0.3s ease;
+.alt h2{
+text-align: left;
+padding-left: 10px;
 }
